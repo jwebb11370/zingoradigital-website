@@ -1,0 +1,123 @@
+/* ========================================
+   ACCOUNT PAGE — login / register panel
+   ======================================== */
+
+/* ---- HERO ---- */
+.account-hero {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  background: var(--color-bg-alt) center/cover no-repeat;
+  /* Set via inline style or drop: assets/backgrounds/account-bg.png */
+}
+
+.account-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.account-hero-title {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-text-invert);
+}
+
+/* ---- MAIN PANEL ---- */
+.account-main {
+  padding: var(--space-3xl) 0;
+  background: var(--color-bg-alt);
+}
+
+.account-panel {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-2xl);
+}
+
+/* ---- TAB SWITCHER ---- */
+.account-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: var(--space-xl);
+}
+
+.account-tab {
+  flex: 1;
+  padding: var(--space-sm) 0;
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.account-tab:hover {
+  color: var(--color-text);
+}
+
+.account-tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* ---- SOCIAL LOGIN ---- */
+.social-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin: var(--space-xl) 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.social-divider::before,
+.social-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.social-login-buttons {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.btn-social {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  cursor: pointer;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.btn-social:hover {
+  background: var(--color-bg-alt);
+  box-shadow: var(--shadow-sm);
+}
+
+.social-btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
